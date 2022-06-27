@@ -1,0 +1,55 @@
+.fondoText{
+    -fx-text-inner-color: white;
+}
+
+/*.list-view .list-cell:even{*/
+/*    -fx-background-color: #d7d7d7;*/
+/*    -fx-text-fill: white;*/
+/*    -fx-border-color: #cecece;*/
+/*}*/
+/*.list-view{*/
+/*    -fx-border-color: #e7e7e7;*/
+/*}*/
+/*.list-view .list-cell:odd{*/
+/*    -fx-background-color: #e3e3e3;*/
+/*    -fx-text-fill: white;*/
+/*}*/
+
+.contener-botones{
+    -fx-border-color: #dcdcdc white #dcdcdc #ffffff;
+}
+.lista{
+    -fx-border-color: white;
+    -fx-background-insets: 0 ;
+}
+
+.terminal{
+    -fx-border-color: #dcdcdc white white white;
+}
+
+.text-area {
+    -fx-background-insets: 0;
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.text-area .content {
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.text-area:focused .content {
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.text-area:focused {
+    -fx-highlight-fill: #7ecfff;
+}
+
+.text-area .content {
+    -fx-padding: 10px;
+    -fx-text-fill: gray;
+    -fx-highlight-fill: #7ecfff;
+}
+
+.code{
+    -fx-border-color: #dcdcdc white white white;
+}
