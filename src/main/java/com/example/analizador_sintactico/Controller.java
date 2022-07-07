@@ -151,6 +151,11 @@ public class Controller {
                     labelStatus.setText("Entrada correcta");
                     labelStatus2.setText("");
                     labelStatus.setStyle("-fx-text-fill: GREEN");
+                    ArrayList<String> listaWidget = new ArrayList<>();
+                    for (ArrayList<String> item: listaValidados
+                         ) {
+                        System.out.println(item.contains(""));
+                    }
                 } else {
                     String mjs = analizadorSintactico.getMensaje();
                     String mjs2 = analizadorSintactico.getMensaje2();

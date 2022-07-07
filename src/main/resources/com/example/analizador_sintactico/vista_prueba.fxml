@@ -17,8 +17,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="841.0" prefWidth="1151.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.analizador_sintactico.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="841.0" prefWidth="1333.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.analizador_sintactico.Controller">
    <children>
       <Pane layoutY="-1.0" prefHeight="848.0" prefWidth="267.0" style="-fx-background-color: white;">
          <children>
@@ -58,7 +57,7 @@
          </children>
       </Pane>
       <Line endX="-111.0" endY="-258.0" layoutX="378.0" layoutY="257.0" startX="-111.0" startY="589.0" stroke="#dcdcdc" />
-      <TextArea fx:id="inputcode" layoutX="316.0" layoutY="44.0" onMouseClicked="#abrirEscrituraCampo" prefHeight="569.0" prefWidth="836.0" styleClass="terminal" stylesheets="@style.css" />
+      <TextArea fx:id="inputcode" layoutX="316.0" layoutY="44.0" onMouseClicked="#abrirEscrituraCampo" prefHeight="569.0" prefWidth="653.0" styleClass="terminal" stylesheets="@style.css" />
       <Pane fx:id="ventanaNombreArchivo" layoutX="535.0" layoutY="200.0" prefHeight="201.0" prefWidth="373.0" style="-fx-background-color: white; -fx-border-color: #dcdcdc; -fx-border-radius: 10; -fx-background-radius: 10;" visible="false">
          <effect>
             <DropShadow spread="0.31">
@@ -78,21 +77,22 @@
             <Text fx:id="msjNombreExistente" fill="RED" layoutX="91.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ya existe un nombre con ese archivo" visible="false" />
          </children>
       </Pane>
-      <Pane layoutX="268.0" layoutY="614.0" prefHeight="227.0" prefWidth="884.0" styleClass="terminal" stylesheets="@style.css">
+      <Pane layoutX="268.0" layoutY="614.0" prefHeight="227.0" prefWidth="700.0" styleClass="terminal" stylesheets="@style.css">
          <children>
             <Text layoutX="26.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Terminal" wrappingWidth="65.779296875" />
-            <ImageView fitHeight="17.0" fitWidth="13.0" layoutX="847.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="17.0" fitWidth="13.0" layoutX="659.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@cross.png" />
                </image>
             </ImageView>
-            <ListView fx:id="terminal" layoutY="43.0" prefHeight="190.0" prefWidth="884.0" styleClass="lista" stylesheets="@style.css" />
-            <Line endX="757.0" layoutX="127.0" layoutY="43.0" startX="-127.0" stroke="GAINSBORO" />
+            <ListView fx:id="terminal" layoutY="43.0" prefHeight="190.0" prefWidth="700.0" styleClass="lista" stylesheets="@style.css" />
+            <Line endX="573.0" layoutX="127.0" layoutY="43.0" startX="-127.0" stroke="GAINSBORO" />
             <Label fx:id="labelStatus" layoutX="129.0" layoutY="14.0" />
-            <Label fx:id="labelStatus2" layoutX="330.0" layoutY="11.0" prefHeight="25.0" prefWidth="494.0" />
+            <Label fx:id="labelStatus2" layoutX="330.0" layoutY="11.0" prefHeight="25.0" prefWidth="373.0" />
          </children>
       </Pane>
       <Text fx:id="nombreArchivoAbiertVista" layoutX="283.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" />
       <VBox fx:id="columnaText" layoutX="266.0" layoutY="44.0" prefHeight="569.0" prefWidth="51.0" />
+      <Pane layoutX="972.0" layoutY="1.0" prefHeight="841.0" prefWidth="362.0" style="-fx-background-color: #F1F3F4;" />
    </children>
 </Pane>
