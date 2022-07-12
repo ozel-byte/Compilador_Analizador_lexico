@@ -50,6 +50,12 @@ public class Controller {
     private TextField campoNombreFile;
     @FXML
     private Text msjNombreExistente;
+
+    @FXML
+    private Text textoerrordesborde;
+
+    @FXML
+    private Text textocode;
     AnalizadorLexico analizador;
 
     @FXML
@@ -57,6 +63,9 @@ public class Controller {
 
     @FXML
     private VBox columnaText;
+
+    @FXML
+    private Pane panelVista;
 
     FileWriter archivoAbierto;
 
@@ -152,10 +161,33 @@ public class Controller {
                     labelStatus2.setText("");
                     labelStatus.setStyle("-fx-text-fill: GREEN");
                     ArrayList<String> listaWidget = new ArrayList<>();
-                    for (ArrayList<String> item: listaValidados
-                         ) {
-                        System.out.println(item.contains(""));
+
+                    for (ArrayList<String> item: listaValidados) {
+                        System.out.println(item);
                     }
+                    String input = inputcode.getText();
+                    ArrayList<Integer> listao = new ArrayList<>();
+                    validarCantidadColumn(input,listao,"Fila");
+                    validarCantidadColumn(input,listao,"Column");
+                    if(listao.get(0) > 4){
+                        textoerrordesborde.setVisible(true);
+                        textoerrordesborde.setText("Se desborda el codigo por favor revise la cantidad de filas. se permiten 4 maximo");
+                    }
+                    if(listao.get(0) > 20){
+                        textoerrordesborde.setVisible(true);
+                        textoerrordesborde.setText("Se desborda el codigo por favor revise la cantidad de column se permiten 20 en total");
+                    }
+
+                    if(listao.get(0) <=5 && listao.get(1) <=20){
+                        textoerrordesborde.setVisible(false);
+                    }
+                   String newInput = input.replace("Columna","Column");
+                    System.out.println(newInput);
+                    String newInput2 = newInput.replace("Fila","Row");
+                    String newInput3 = newInput2.replace("Lista","ListView");
+                    textocode.setText(newInput3);
+
+
                 } else {
                     String mjs = analizadorSintactico.getMensaje();
                     String mjs2 = analizadorSintactico.getMensaje2();
@@ -180,7 +212,16 @@ public class Controller {
             labelStatus.setStyle("-fx-text-fill: RED");
         }
     }
+    void validarCantidadColumn(String entrada,ArrayList<Integer>lista,String tipo){
+        int time = 0;
+        for(int i = 0; i<entrada.length(); i++){
+            if (entrada.substring(i).startsWith(tipo)){
+                time++;
+            }
+        }
+        lista.add(time);
 
+    }
     @FXML
     private void limpiar(){
         idEntrada.clear();
@@ -239,6 +280,8 @@ public class Controller {
         String ruta = "src/main/java/com/example/analizador_sintactico/Archivos/";
 
         listaArchivos.getSelectionModel().selectedItemProperty().addListener((observableValue, s, t1) -> {
+            textoerrordesborde.setText("");
+            textocode.setText("");
             System.out.println("entro selecion : "+textoaux);
             Text change = (Text) t1.getChildren().get(0);
             inputcode.setText("");

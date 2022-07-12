@@ -93,6 +93,11 @@
       </Pane>
       <Text fx:id="nombreArchivoAbiertVista" layoutX="283.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" />
       <VBox fx:id="columnaText" layoutX="266.0" layoutY="44.0" prefHeight="569.0" prefWidth="51.0" />
-      <Pane layoutX="972.0" layoutY="1.0" prefHeight="841.0" prefWidth="362.0" style="-fx-background-color: #F1F3F4;" />
+      <Pane fx:id="panelVista" layoutX="968.0" layoutY="1.0" prefHeight="813.0" prefWidth="362.0" style="-fx-background-color: #F1F3F4;">
+         <children>
+            <Text fx:id="textocode" layoutX="29.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="290.13671875" />
+            <Text fx:id="textoerrordesborde" fill="#f24949" layoutX="14.0" layoutY="753.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="334.936767578125" />
+         </children>
+      </Pane>
    </children>
 </Pane>
